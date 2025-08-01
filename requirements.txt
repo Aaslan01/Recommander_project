@@ -1,0 +1,16 @@
+# Core data science libraries
+pandas>=1.5.0
+numpy>=1.21.0
+scikit-learn>=1.1.0
+
+# Deep learning
+torch>=1.12.0
+
+# Twitter API
+tweepy>=4.12.0
+
+# Sentiment analysis
+vaderSentiment>=3.3.2
+
+# Visualization
+matplotlib>=3.5.0
