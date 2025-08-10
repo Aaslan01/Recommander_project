@@ -1,0 +1,11 @@
+item_id,title,mf_pred_avg,sentiment
+169,"Wrong Trousers, The (1993)",4.615303047754266,0.439
+318,Schindler's List (1993),4.601069902877175,0.573
+408,"Close Shave, A (1995)",4.596636250004498,0.61
+515,"Boot, Das (1981)",4.49672831002175,0.666
+603,Rear Window (1954),4.492947530254898,0.64
+1449,Pather Panchali (1955),4.472382716961934,0.621
+480,North by Northwest (1959),4.442950555787097,0.442
+657,"Manchurian Candidate, The (1962)",4.416604584153842,0.468
+357,One Flew Over the Cuckoo's Nest (1975),4.388467722652195,0.774
+114,Wallace & Gromit: The Best of Aardman Animation (1996),4.382117163619118,0.606
