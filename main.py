@@ -22,7 +22,7 @@ def main():
     """Main entry point for the Recommander project."""
     
     parser = argparse.ArgumentParser(
-        description="🎬 Recommander Project - Hybrid Movie Recommendation System",
+        description="Recommander Project - Hybrid Movie Recommendation System",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
@@ -68,25 +68,25 @@ Examples:
     
     try:
         if args.sentiment:
-            print("📊 Generating sentiment data...")
+            print("Generating sentiment data...")
             os.system("python sentiment_analysis.py")
             
         elif args.experiments:
-            print("🧪 Running experiments...")
+            print("Running experiments...")
             os.system("python run_experiments.py")
             
         elif args.plots:
-            print("📈 Generating plots...")
+            print("Generating plots...")
             os.system("python plot_runner.py")
             
         elif args.pipeline:
-            print("🚀 Running complete pipeline...")
+            print("Running complete pipeline...")
             os.system("python final_pipeline.py")
             
-        print("\n✅ Operation completed successfully!")
+        print("\nOperation completed successfully!")
         
     except Exception as e:
-        print(f"\n❌ Error occurred: {e}")
+        print(f"\nError occurred: {e}")
         print("Please check that all dependencies are installed and data files are present.")
         sys.exit(1)
 
