@@ -6,7 +6,7 @@ scikit-learn>=1.1.0
 # Deep learning
 torch>=1.12.0
 
-# Twitter API
+# Twitter API (optional - for real sentiment collection)
 tweepy>=4.12.0
 
 # Sentiment analysis
@@ -14,3 +14,8 @@ vaderSentiment>=3.3.2
 
 # Visualization
 matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# Additional utilities
+tqdm>=4.64.0
+pathlib2>=2.3.7; python_version < "3.4"

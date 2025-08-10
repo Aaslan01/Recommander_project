@@ -30,7 +30,35 @@ python -c "import pandas, numpy, sklearn, torch, matplotlib; print('✅ All depe
 
 ## 🎯 Running the Project
 
-### Step 1: Generate Sentiment Data
+### Option 1: Complete Pipeline (Recommended)
+```bash
+# Run the complete end-to-end system
+python final_pipeline.py
+```
+
+**Expected Output:**
+```
+Loading and preprocessing data...
+ - users: 943, items: 1682, ratings rows: 100000
+
+==> Training Matrix Factorization (MF) ...
+Iteration: 1, RMSE: 2.4743
+...
+Final RMSE (MF): 0.8600
+
+==> Training Hybrid Recommender ...
+Hybrid - RMSE: 0.9429, MAE: 0.7455
+
+==== TOP-10 COMPARISON ====
+Overlap (X items): {item_ids}
+...
+Saved top-10 lists to outputs/
+All finished.
+```
+
+### Option 2: Step-by-Step Execution
+
+#### Step 1: Generate Sentiment Data
 ```bash
 # Generate synthetic sentiment scores for all movies
 python sentiment_analysis.py
@@ -99,6 +127,7 @@ Recommander_project/
 │   ├── u.item              # Movie metadata
 │   ├── sentiment_scores.csv # Generated sentiment data
 │   └── u.genre             # Genre definitions
+├── final_pipeline.py       # 🆕 Complete end-to-end pipeline
 ├── sentiment_analysis.py   # Generate synthetic sentiment
 ├── run_experiments.py      # Main experiment runner
 ├── plot_runner.py          # Comprehensive experiments
@@ -108,12 +137,16 @@ Recommander_project/
 ├── evaluation.py           # Performance metrics
 ├── topk_evaluation.py      # Top-K evaluation
 ├── plot_results.py         # Visualization
+├── outputs/                # Generated recommendations
+│   ├── mf_top10.csv       # MF top-10 results
+│   └── hybrid_top10.csv   # Hybrid top-10 results
 └── requirements.txt        # Dependencies
 ```
 
 ## 🔧 Individual Scripts Explained
 
 ### Core Scripts
+- **`final_pipeline.py`**: 🆕 Complete end-to-end system that runs both models and generates top-10 recommendations
 - **`sentiment_analysis.py`**: Generates synthetic sentiment scores based on movie characteristics
 - **`run_experiments.py`**: Main experiment comparing Matrix Factorization vs Hybrid model
 - **`plot_runner.py`**: Runs comprehensive experiments with different hyperparameters
@@ -148,6 +181,8 @@ Recommander_project/
 
 ### Generated Files
 - `data/sentiment_scores.csv`: Synthetic sentiment scores for all movies
+- `outputs/mf_top10.csv`: Matrix Factorization top-10 recommendations with titles and sentiment
+- `outputs/hybrid_top10.csv`: Hybrid model top-10 recommendations with titles and sentiment
 - `rmse_comparison.png`: Performance comparison plot
 - `__pycache__/`: Python cache files (can be ignored)
 
@@ -172,7 +207,10 @@ Recommander_project/
 
 ## 🚀 Quick Start (One Command)
 ```bash
-# Complete pipeline in one go
+# Complete pipeline in one go (Recommended)
+source venv/bin/activate && python final_pipeline.py
+
+# Alternative: Step-by-step execution
 source venv/bin/activate && python sentiment_analysis.py && python run_experiments.py && python plot_runner.py
 ```
 
